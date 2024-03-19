@@ -1,0 +1,53 @@
+p2.2_wangyf9_fanych1
+/* First pass of the assembler. You should implement pass_two() first. 
+   This function should read each line, strip all comments, scan for labels,
+   and pass instructions to write_original_code(), pass data to write_static_data(). 
+   The symbol table and data segment should also been built and written to 
+   specified file. The input file may or may not be valid. Here are some guidelines:
+
+   1. Only one of ".data" or ".text" may be present per line. It must be the 
+      first token present. Once you see a ".data" or ".text", the rest part
+      will be treat as data or text segment until the next ".data" or ".text"
+      Appears. Ignore the rest token of this line. Default to text segment 
+      if not indicated.
+    
+   2. For data segment, we only considering ".word", ".half", ".Byte" types.
+      These types must be the first token of a line. The rest of the tokens 
+      in this line will be stored as variables of that type in the data segment.
+      You can assume that these numbers are legal with their types.
+
+   3. Only one label may be present per line. It must be the first token
+      present. Once you see a label, regardless of whether it is a valid label
+      or invalid label, You can treat the NEXT token in this line as the 
+      beginning of an instruction or a static data.
+
+   4. If the first token is not a label, treat it as the name of an
+      instruction. DO NOT try to check it is a valid instruction in this pass.
+   
+   5. Everything after the instruction name in the same line should be treated 
+      as arguments to that instruction. If there are more than MAX_ARGS 
+      arguments, call raise_extra_argument_error() and pass in the first extra 
+      argument. Do not write that instruction to the original file (eg. don't call
+      write_original_code())
+   
+   6. Only one instruction should be present per line. You do not need to do
+       anything extra to detect this - it should be handled by guideline 5.
+   
+   8. A line containing only a label is valid. The address of the label should
+      be the address of the next instruction or static data regardless of 
+      whether there is a next instruction or static data or not.
+   
+   9. If an instruction contains an immediate, you should output it AS IS.
+   
+   10. Comments should always be skipped before any further process.
+
+   11. Note that the starting address of the text segment is defined as TEXT_BASE
+   in "../types.", and the starting address of the data segment is defined as 
+   DATA_BASE in "../types.".
+
+   12. Think about how you should use write_original_code() and write_static_data().
+   
+   Just like in pass_two(), if the function encounters an error it should NOT
+   exit, but process the entire file and return -1. If no errors were
+   encountered, it should return
+ */
