@@ -45,7 +45,7 @@ In this part, we need to implement a cpu by constructing five stages, that is
    The write back stage is where the results of the operation is saved back to the registers. Although not all instructions will write back to the register file (can you think of some which do not?), the addi instruction does.
 
 
-### Project 3 From CA to LBM
+## Project 3 From CA to LBM
 In this project, we hope you can use all knowledge about computer architecture that your have learned in this course to optimize lattice Boltzmann methods (LBM). 
 
 There are a lot of parts you can optimize and a lot of techniques you can use. And what we have used are as follows, 
@@ -54,7 +54,7 @@ There are a lot of parts you can optimize and a lot of techniques you can use. A
 3. Multithreading
 4. SIMD instructions
 5. ……
-### Project 4 Sokoban Game on Longan Nano
+## Project 4 Sokoban Game on Longan Nano
 As CS110 is coming to an end, it's time to put the skills we've learned into practice.
 
 In this project, you will code in C language and RISC-V assembly to implement a Sokoban game.
